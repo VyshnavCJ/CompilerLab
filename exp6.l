@@ -1,5 +1,5 @@
 %{
-#include "valid_arith.tab.h"
+#include "y.tab.h"
 int yyerror();
 %}
 %%
