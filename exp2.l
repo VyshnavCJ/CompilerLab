@@ -1,6 +1,6 @@
 preprocessor #.*
 identifier [a-zA-Z_][_a-zA-Z0-9]*
-keyword int|float|char|double|while\(.*\)|for\(.*\)|do|if\(.*\)|break|continue||do|if\(.*\)|break|continue|void|switch\(.*\)
+keyword int|float|char|double|while\(.*\)|for\(.*\)|do|if\(.*\)|break|continue|switch\(.*\)
 |case|long|struct|const|typedef|return|else|goto
 comment "/*"([^*]|(\*+[^*/]))*\*+\/|"//".*
 asmnt_op "="|"+="|"-="|"/="|"*="
