@@ -24,27 +24,18 @@ void main() {
   explore();
 }
 void findopr() {
-  for (i = 0; str[i] != '\0'; i++)
+  for (i = 0; str[i] != '\0'; i++) {
     if (str[i] == ':') {
       k[j].pos = i;
       k[j++].op = ':';
-    }
-  for (i = 0; str[i] != '\0'; i++)
-    if (str[i] == '/' || str[i] == '*') {
+    } else if (str[i] == '/' || str[i] == '*') {
       k[j].pos = i;
-      if (str[i] == '/')
-        k[j++].op = '/';
-      else
-        k[j++].op = '*';
-    }
-  for (i = 0; str[i] != '\0'; i++)
-    if (str[i] == '+' || str[i] == '-') {
+      k[j++].op = (str[i] == '/') ? '/' : '*';
+    } else if (str[i] == '+' || str[i] == '-') {
       k[j].pos = i;
-      if (str[i] == '+')
-        k[j++].op = '+';
-      else
-        k[j++].op = '-';
+      k[j++].op = (str[i] == '+') ? '+' : '-';
     }
+  }
 }
 void explore() {
   i = 0;
